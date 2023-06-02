@@ -1,4 +1,4 @@
-# flarum-ext-money
+# flarum-rainway-money
 
 Give money to your users for different actions.
 
@@ -6,12 +6,12 @@ Give money to your users for different actions.
 
 ## Installation
 ```
-composer require antoinefr/flarum-ext-money
+composer require flarfgithub/flarum-ext-money
 ```
 
 ## Updating
 ```
-composer update antoinefr/flarum-ext-money
+composer update flarfgithub/flarum-ext-money
 php flarum migrate
 php flarum cache:clear
 ```
