@@ -19,21 +19,20 @@
             "FlarfGithub\\Money\\": "src/"
         }
     },
-"extra": {
-    "flarum-extension": {
-        "title": "Money",
-        "category": "feature",
-        "icon": {
-            "name": "fas fa-money-bill",
-            "backgroundColor": "#FFD700",
-            "color": "#85bb65"
-        },
-        "optional-dependencies": [
-            "flarum/likes",
-            "askvortsov/flarum-auto-moderator"
-        ],
-        "minimum-stability": "stable"
+    "extra": {
+        "flarum-extension": {
+            "title": "Money",
+            "category": "feature",
+            "icon": {
+                "name": "fas fa-money-bill",
+                "backgroundColor": "#FFD700",
+                "color": "#85bb65"
+            },
+            "optional-dependencies": [
+                "flarum/likes",
+                "askvortsov/flarum-auto-moderator"
+            ],
+            "minimum-stability": "dev"
+        }
     }
-}
-
 }
