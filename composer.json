@@ -3,11 +3,14 @@
     "description": "Give money to your users for different actions.",
     "type": "flarum-extension",
     "license": "MIT",
-    "version": "1.0.0",
+    "support": {
+        "forum": "https://discuss.flarum.org/d/4699-money-extension",
+        "issues": "https://github.com/AntoineFr/flarum-ext-money/issues",
+        "source": "https://github.com/AntoineFr/flarum-ext-money"
+    },
     "require": {
         "flarum/core": "^1.0"
     },
-},
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*"
     },
