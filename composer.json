@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "AntoineFr\\Money\\": "src/"
+            "FlarfGithub\\Money\\": "src/"
         }
     },
     "extra": {
