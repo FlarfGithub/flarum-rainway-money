@@ -36,3 +36,10 @@
         }
     }
 }
+
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/FlarfGithub/flarum-rainway-money"
+    }
+]
