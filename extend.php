@@ -1,6 +1,6 @@
 <?php
 
-namespace AntoineFr\Money;
+namespace FlarfGithub\Money;
 
 use Flarum\Extend;
 use Flarum\Api\Serializer\UserSerializer;
@@ -15,6 +15,7 @@ use Flarum\Discussion\Event\Deleted as DiscussionDeleted;
 use Flarum\User\Event\Saving;
 use Flarum\Likes\Event\PostWasLiked;
 use Flarum\Likes\Event\PostWasUnliked;
+use Flarum\User\Event\LoggedIn; // Added for daily stipend
 
 $extend = [
     (new Extend\Frontend('forum'))
@@ -41,7 +42,8 @@ $extend = [
         ->listen(DiscussionRestored::class, [Listeners\GiveMoney::class, 'discussionWasRestored'])
         ->listen(DiscussionHidden::class, [Listeners\GiveMoney::class, 'discussionWasHidden'])
         ->listen(DiscussionDeleted::class, [Listeners\GiveMoney::class, 'discussionWasDeleted'])
-        ->listen(Saving::class, [Listeners\GiveMoney::class, 'userWillBeSaved']),
+        ->listen(Saving::class, [Listeners\GiveMoney::class, 'userWillBeSaved'])
+        ->listen(LoggedIn::class, [Listeners\UserWasLoggedIn::class, 'handle']), // Added for daily stipend
 ];
 
 if (class_exists('Flarum\Likes\Event\PostWasLiked')) {
