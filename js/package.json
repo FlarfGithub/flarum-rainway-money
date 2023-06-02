@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@antoinefr/flarum-ext-money",
+  "name": "@flarfgithub/flarum-rainway-money",
   "devDependencies": {
     "flarum-webpack-config": "^2.0.0",
     "webpack": "^5.76.0",
