@@ -19,6 +19,7 @@
             "FlarfGithub\\Money\\": "src/"
         }
     },
+      "minimum-stability": "dev"
     "extra": {
         "flarum-extension": {
             "title": "Money",
