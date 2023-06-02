@@ -13,16 +13,12 @@ class AddUserMoneyAttributes
 
         $attributes = [];
 
-        // Get the current date and the last login date
-        $currentDate = date('Y-m-d');
-        $lastLoginDate = $user->last_seen->toDateString();
-
         // Check if the user has logged in today
-        $hasLoggedToday = ($currentDate === $lastLoginDate);
+        $hasLoggedToday = $this->hasLoggedToday($user);
 
         // Give the daily currency stipend if the user has logged in today
         if ($hasLoggedToday) {
-            $currencyAmount = 50; // Adjust this value to your desired stipend amount
+            $currencyAmount = 10; // Adjust this value to your desired stipend amount
             GiveMoney::giveCurrency($user, $currencyAmount);
         }
 
@@ -30,5 +26,19 @@ class AddUserMoneyAttributes
         $attributes['canEditMoney'] = $canEditMoney;
 
         return $attributes;
+    }
+
+    /**
+     * Check if the user has logged in today.
+     *
+     * @param User $user
+     * @return bool
+     */
+    private function hasLoggedToday(User $user): bool
+    {
+        $lastLoginDate = $user->last_seen->toDateString();
+        $currentDate = date('Y-m-d');
+
+        return $lastLoginDate === $currentDate;
     }
 }
